@@ -25,6 +25,8 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable exporterd
 sudo systemctl restart exporterd
+# Открываем порт 9100
+sudo ufw allow 9100 
 # наш логотип для красоты
 echo -e "\033[1;36m"
 echo -e "████╗░██████╗░███████╗████╗  ░█████╗░███████╗░█████╗░███████╗██╗░░░░░░█████╗░"
