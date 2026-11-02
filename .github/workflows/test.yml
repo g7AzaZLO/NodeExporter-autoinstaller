@@ -1,0 +1,11 @@
+name: Test installer
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Check installation, real metrics and rollback in an isolated container
+        run: bash tests/run.sh
